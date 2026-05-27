@@ -1,7 +1,7 @@
 #import "@preview/modern-cv:0.10.0": *
 #import "@preview/fontawesome:0.6.0": *
 
-#let youtube-icon = box(fa-icon("youtube"))
+#let youtube-icon = box(fa-icon("youtube", font: "Font Awesome 7 Brands"))
 
 #let impl-language = sys.inputs.at("impl-language", default: "en")
 #let tr(en, ru) = if impl-language == "ru" { ru } else { en }
@@ -10,22 +10,24 @@
   author: (
     firstname: tr("Hariton", "Харитон"),
     lastname: tr("Pitsik", "Пицик"),
-    email: "pitsikhariton@gmail.com",
-    phone: "(+7)-902-043-86-38",
+    email: tr("pitsikhariton@gmail.com", "pitsikhariton@yandex.ru"),
+    // phone: "(+7)-902-043-86-38",
     github: "haritonn",
-    telegram: "haritonn",
+    custom: (
+      (text: "@hariton_p", icon: "telegram", link: "https://t.me/hariton_p"),
+    ),
     // linkedin: "Example",
     birth: "25.04.2005",
     address: tr("Saratov, Russia", "Саратов, Россия"),
     positions: tr(
       (
         "ML Engineer",
-        "AI Research",
+        "AI Researcher",
         "Data Scientist",
       ),
       (
         "ML-инженер",
-        "AI-исследователь",
+        "Исследователь ИИ",
         "Data Scientist",
       ),
     ),
@@ -33,6 +35,8 @@
   profile-picture: image("photka.jpg", width: 4cm, height: 4cm, fit: "cover"),
   date: none,
   paper-size: "us-letter",
+  accent-color: rgb("#65b95f"),
+  language: tr("en", "ru"),
 )
 
 = #tr("Education", "Образование")
@@ -50,13 +54,13 @@
 = #tr("Skills", "Навыки")
 
 #resume-skill-item(
-  tr("Languages", "Языки программирования"),
+  tr("Programming languages", "Языки программирования"),
   ("Python", "Rust", "SQL"),
 )
 
 #resume-skill-item(
-  tr("Communication languages", "Иностранные языки"),
-  tr(("Russian (native)", "English (B1-B2)"), ("Русский (родной)", "Английский (B1-B2)")),
+  tr("Spoken languages", "Языки общения"),
+  tr(("Russian (native)", "English (B1-B2)"), ("Русский (родной)", "английский (B1-B2)")),
 )
 
 #resume-skill-item(
@@ -91,7 +95,7 @@
       "Mathematical Analysis",
       "Probability Theory & Statistics",
       "Computer Science",
-      "Classic ML Algorithms (Supervised & Unsupervised)",
+      "Classical ML Algorithms (Supervised & Unsupervised)",
       "Deep Learning",
       "Natural Language Processing (NLP)",
       "Large Language Models (LLM)",
@@ -101,7 +105,7 @@
       "Математический анализ",
       "Теория вероятностей и статистика",
       "Информатика",
-      "Классические ML-алгоритмы (supervised & unsupervised)",
+      "Классические алгоритмы машинного обучения (с учителем и без учителя)",
       "Глубокое обучение",
       "Обработка естественного языка (NLP)",
       "Большие языковые модели (LLM)",
@@ -109,41 +113,33 @@
   ),
 )
 
-= #tr("Achievements", "Достижения")
+= #tr("Some achievements", "Некоторые достижения")
 
-== #tr("Teaching", "Преподавание")
+== #tr("Teaching & Social", "Преподавание & Социальное")
 #tr(
   [
-    - I believe that education is awesome and that we need to talk about it. I teach a machine learning club as part of a students community at the university.
-    - Recordings of the lectures on NumPy (#link("https://youtu.be/5dgYgDVg4v0?si=kPaaW5UcacEL5GJK")[#youtube-icon #underline[YouTube]]) and Pandas (#link("https://youtu.be/ejz3DEaZGjw?si=OycoAyRRrbHNP0l_")[#youtube-icon #underline[YouTube]]).
-    - Playlist of machine learning club: (#link("https://youtube.com/playlist?list=PLIz9eWHArYfhrL4Viaz2vEthyffHz8ZFM&si=ngvT7XNi4CJeeTyJ")[#youtube-icon #underline[Here]])
+    - #link("https://dsc.alivetech.org/")[Participant of Development Students Club (DSC)]
+    - I believe education is important and should be shared. I teach machine learning as part of a DSC community.
+      - Lecture recordings on NumPy (#link("https://youtu.be/5dgYgDVg4v0?si=kPaaW5UcacEL5GJK")[#youtube-icon #underline[YouTube]]) and Pandas (#link("https://youtu.be/ejz3DEaZGjw?si=OycoAyRRrbHNP0l_")[#youtube-icon #underline[YouTube]]).
+      - Machine Learning Club playlist: (#link("https://youtube.com/playlist?list=PLIz9eWHArYfhrL4Viaz2vEthyffHz8ZFM&si=ngvT7XNi4CJeeTyJ")[#youtube-icon #underline[YouTube]])
   ],
   [
-    - Считаю, что образование — это важно и об этом нужно говорить. Я являюсь преподавателем клуба машинного обучения в рамках студенческого сообщества в университете.
-    - Записи лекций по NumPy (#link("https://youtu.be/5dgYgDVg4v0?si=kPaaW5UcacEL5GJK")[#youtube-icon #underline[YouTube]]) и Pandas (#link("https://youtu.be/ejz3DEaZGjw?si=OycoAyRRrbHNP0l_")[#youtube-icon #underline[YouTube]]).
-    - Плейлист клуба машинного обучения: (#link("https://youtube.com/playlist?list=PLIz9eWHArYfhrL4Viaz2vEthyffHz8ZFM&si=ngvT7XNi4CJeeTyJ")[#youtube-icon #underline[Здесь]])
+    - #link("https://dsc.alivetech.org/")[Участник студенческих клубов разработки]
+    - Считаю, что образование важно и знаниями нужно делиться. Преподаю машинное обучение в рамках студенческих клубов разработки.
+      - Записи лекций по NumPy (#link("https://youtu.be/5dgYgDVg4v0?si=kPaaW5UcacEL5GJK")[#youtube-icon #underline[YouTube]]) и Pandas (#link("https://youtu.be/ejz3DEaZGjw?si=OycoAyRRrbHNP0l_")[#youtube-icon #underline[YouTube]]).
+      - Плейлист клуба машинного обучения: (#link("https://youtube.com/playlist?list=PLIz9eWHArYfhrL4Viaz2vEthyffHz8ZFM&si=ngvT7XNi4CJeeTyJ")[#youtube-icon #underline[YouTube]])
   ],
 )
 
 == #tr("Competitions", "Соревнования")
 #tr(
   [
-    - Participant of HSE & X5 contest "Growth gradient", which focused on solving time series forecasting problems (#link("https://disk.yandex.ru/i/V5_o5Yfp3gVFLQ")[#underline[Here]]);
-    - As an analyst of existing hashing methods, the FSP hackathon participant examined potential sources of chaos.
+    - Participant in the HSE & X5 Growth Gradient contest, focused on time series forecasting (#link("https://disk.yandex.ru/i/V5_o5Yfp3gVFLQ")[#underline[Link]]).
+    - Participant in the FSP hackathon as an analyst of existing hashing methods and potential sources of entropy.
   ],
   [
-    - Участник конкурса HSE & X5 «Градиент роста», посвященного решению задач прогнозирования временных рядов (#link("https://disk.yandex.ru/i/V5_o5Yfp3gVFLQ")[#underline[Здесь]]);
-    - Участник хакатона ФСП в роли аналитика существующих методов хеширования, анализировал возможные источники неопределённости.
-  ],
-)
-
-== #tr("Other activity", "Другие активности")
-#tr(
-  [
-
-  ],
-  [
-
+    - Участник конкурса HSE & X5 «Градиент роста», посвящённого прогнозированию временных рядов (#link("https://disk.yandex.ru/i/V5_o5Yfp3gVFLQ")[#underline[ссылка]]).
+    - Участник хакатона ФСП в роли аналитика существующих методов хеширования и потенциальных источников энтропии.
   ],
 )
 
@@ -157,14 +153,14 @@
 
 #resume-item[#tr(
   [
-    - Built a local RAG system with switchable LLM backend;
-    - Implemented hybrid retrieval, document chunking and automated relevance evaluation;
-    - Qdrant vector database and Streamlit interface application
+    - Built a local RAG system with a switchable LLM backend;
+    - Implemented hybrid retrieval, document chunking, and automated relevance evaluation;
+    - Integrated the Qdrant vector database and built a Streamlit interface.
   ],
   [
-    - Разработал локальную RAG-систему с переключаемым LLM-бэкендом;
-    - Реализовал гибридный поиск, разбиение документов на чанки и автоматическую оценку релевантности;
-    - Использовал векторную базу Qdrant и интерфейс на Streamlit
+    - Разработал локальную RAG-систему со сменяемым LLM-бэкендом;
+    - Реализовал гибридный поиск, разбиение документов на фрагменты и автоматическую оценку релевантности;
+    - Интегрировал векторную базу данных Qdrant и интерфейс на Streamlit.
   ],
 )]
 
@@ -178,12 +174,12 @@
   [
     - Implemented the full encoder-decoder architecture in PyTorch;
     - Built a modular training pipeline for seq2seq tasks;
-    - Fully customizable pipeline for experiments.
+    - Designed a fully customizable pipeline for experiments.
   ],
   [
-    - Реализовал полную encoder-decoder архитектуру на PyTorch;
-    - Разработал модульный training pipeline для seq2seq-задач;
-    - Сделал полностью настраиваемый pipeline для экспериментов.
+    - Реализовал полную архитектуру «энкодер-декодер» на PyTorch;
+    - Разработал модульный процесс обучения для seq2seq-задач;
+    - Сделал полностью настраиваемый процесс для экспериментов.
   ],
 )]
 
@@ -195,21 +191,21 @@
 
 #resume-item[#tr(
   [
-    - Built an image captioning pipeline with ResNet backbone and an attention-based LSTM;
-    - Project wrote using only PyTorch, without pre-built implementations;
-    - Beam and greedy search decoding;
-    - End-to-end training workflow.
+    - Built an image captioning pipeline with a ResNet backbone and an attention-based LSTM;
+    - Implemented the project entirely in PyTorch without pre-built components;
+    - Implemented beam search and greedy decoding;
+    - Built an end-to-end training workflow.
   ],
   [
-    - Разработал pipeline для генерации описаний изображений с ResNet backbone и attention-based LSTM;
-    - Проект реализован только на PyTorch, без готовых реализаций;
-    - Реализовал beam search и greedy search decoding;
-    - Настроил end-to-end процесс обучения.
+    - Разработал пайплайн генерации описаний изображений на основе ResNet и LSTM с механизмом внимания;
+    - Реализовал проект полностью на PyTorch, без готовых компонентов;
+    - Реализовал лучевой поиск и жадное декодирование;
+    - Настроил полный цикл обучения.
   ],
 )]
 
 #resume-entry(
-  title: tr("ResNet with Attention", "ResNet с attention-механизмом"),
+  title: tr("ResNet with Attention", "ResNet с механизмом внимания"),
   location: [#github-link("github.com/haritonn/resnet_attention")],
   description: "",
 )
@@ -221,20 +217,20 @@
     - Tracked experiments with ClearML.
   ],
   [
-    - Реализовал baseline ResNet и варианты ResNet с attention-механизмом на PyTorch;
-    - Сравнил скорость сходимости и accuracy классификации;
+    - Реализовал базовую ResNet и варианты ResNet с механизмом внимания на PyTorch;
+    - Сравнил скорость сходимости и точность классификации;
     - Отслеживал эксперименты в ClearML.
   ],
 )]
 
-= #tr("Courseworks", "Курсовые работы")
+= #tr("Coursework", "Курсовые работы")
 
 #resume-entry(
   title: tr("2nd Year: Generative Computer Vision", "2 курс: генеративное компьютерное зрение"),
   location: [#github-link("github.com/haritonn/coursework2")],
   description: tr(
-    "Compared diffusion models, GANs, and LMM-based approaches for virtual try-on. Evaluated visual quality and inference time on a custom dataset.",
-    "Сравнил диффузионные модели, GAN и LMM-based подходы для virtual try-on. Оценил визуальное качество и время инференса на собственном датасете.",
+    "Compared diffusion models, GANs, and large multimodal model (LMM)-based approaches for virtual try-on. Evaluated visual quality and inference time on a custom dataset.",
+    "Сравнил диффузионные модели, GAN и подходы на основе больших мультимодальных моделей (LMM) для виртуальной примерки. Оценил визуальное качество и время вывода модели на собственном наборе данных.",
   ),
 )
 
@@ -245,6 +241,6 @@
   ),
   description: tr(
     "Ongoing coursework focused on the analysis of embedding spaces.",
-    "Курсовая в процессе, посвящена анализу пространств эмбеддингов.",
+    "Курсовая работа в процессе; тема: анализ пространств эмбеддингов.",
   ),
 )
