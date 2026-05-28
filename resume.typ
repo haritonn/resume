@@ -19,21 +19,11 @@
     // linkedin: "Example",
     birth: "25.04.2005",
     address: tr("Saratov, Russia", "Саратов, Россия"),
-    positions: tr(
-      (
-        "ML Engineer",
-        "AI Researcher",
-        "Data Scientist",
-      ),
-      (
-        "ML-инженер",
-        "Исследователь ИИ",
-        "Data Scientist",
-      ),
-    ),
+    positions: ("ML Engineer", "AI Researcher", "Data Scientist"),
   ),
+
   profile-picture: image("photka.jpg", width: 4cm, height: 4cm, fit: "cover"),
-  date: none,
+  date: "2026",
   paper-size: "us-letter",
   accent-color: rgb("#65b95f"),
   language: tr("en", "ru"),
@@ -159,7 +149,7 @@
   ],
   [
     - Разработал локальную RAG-систему со сменяемым LLM-бэкендом;
-    - Реализовал гибридный поиск, разбиение документов на фрагменты и автоматическую оценку релевантности;
+    - Реализовал гибридный поиск, разбиение документов на фрагменты и оценку релевантности;
     - Интегрировал векторную базу данных Qdrant и интерфейс на Streamlit.
   ],
 )]
@@ -178,7 +168,7 @@
   ],
   [
     - Реализовал полную архитектуру «энкодер-декодер» на PyTorch;
-    - Разработал модульный процесс обучения для seq2seq-задач;
+    - Разработал интерфейс для обучения на seq2seq-задачи;
     - Сделал полностью настраиваемый процесс для экспериментов.
   ],
 )]
@@ -191,13 +181,13 @@
 
 #resume-item[#tr(
   [
-    - Built an image captioning pipeline with a ResNet backbone and an attention-based LSTM;
+    - Built an image captioning train pipeline with a ResNet backbone and an attention-based LSTM;
     - Implemented the project entirely in PyTorch without pre-built components;
     - Implemented beam search and greedy decoding;
     - Built an end-to-end training workflow.
   ],
   [
-    - Разработал пайплайн генерации описаний изображений на основе ResNet и LSTM с механизмом внимания;
+    - Разработал пайплайн обучения на задачу генерации описаний изображений на основе ResNet и LSTM с механизмом внимания;
     - Реализовал проект полностью на PyTorch, без готовых компонентов;
     - Реализовал лучевой поиск и жадное декодирование;
     - Настроил полный цикл обучения.
@@ -212,12 +202,12 @@
 
 #resume-item[#tr(
   [
-    - Implemented baseline ResNet and attention-augmented ResNet variants in PyTorch;
+    - Implemented baseline ResNet and attention-augmented variant in PyTorch;
     - Compared convergence speed and classification accuracy;
     - Tracked experiments with ClearML.
   ],
   [
-    - Реализовал базовую ResNet и варианты ResNet с механизмом внимания на PyTorch;
+    - Реализовал базовую ResNet и вариант с механизмом внимания на PyTorch;
     - Сравнил скорость сходимости и точность классификации;
     - Отслеживал эксперименты в ClearML.
   ],
@@ -230,7 +220,7 @@
   location: [#github-link("github.com/haritonn/coursework2")],
   description: tr(
     "Compared diffusion models, GANs, and large multimodal model (LMM)-based approaches for virtual try-on. Evaluated visual quality and inference time on a custom dataset.",
-    "Сравнил диффузионные модели, GAN и подходы на основе больших мультимодальных моделей (LMM) для виртуальной примерки. Оценил визуальное качество и время вывода модели на собственном наборе данных.",
+    "Сравнил диффузионные модели, GAN и подходы на основе LMM для виртуальной примерки. Оценил визуальное качество и время вывода модели на собственном наборе данных.",
   ),
 )
 
