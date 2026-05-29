@@ -137,7 +137,7 @@
 
 #resume-entry(
   title: tr("Local RAG System", "Локальная RAG-система"),
-  location: [#github-link("github.com/haritonn/pdf_rag")],
+  location: [#github-link("haritonn/pdf_rag")],
   description: "",
 )
 
@@ -156,7 +156,7 @@
 
 #resume-entry(
   title: tr("Transformers from Scratch", "Transformers from Scratch"),
-  location: [#github-link("github.com/haritonn/transformers-scratch")],
+  location: [#github-link("haritonn/transformers-scratch")],
   description: "",
 )
 
@@ -175,7 +175,7 @@
 
 #resume-entry(
   title: tr("Caption Generator", "Генератор описаний изображений"),
-  location: [#github-link("github.com/haritonn/caption_gen")],
+  location: [#github-link("haritonn/caption_gen")],
   description: "",
 )
 
@@ -196,7 +196,7 @@
 
 #resume-entry(
   title: tr("ResNet with Attention", "ResNet с механизмом внимания"),
-  location: [#github-link("github.com/haritonn/resnet_attention")],
+  location: [#github-link("haritonn/resnet_attention")],
   description: "",
 )
 
@@ -217,7 +217,7 @@
 
 #resume-entry(
   title: tr("2nd Year: Generative Computer Vision", "2 курс: генеративное компьютерное зрение"),
-  location: [#github-link("github.com/haritonn/coursework2")],
+  location: [#github-link("haritonn/coursework2")],
   description: tr(
     "Compared diffusion models, GANs, and large multimodal model (LMM)-based approaches for virtual try-on. Evaluated visual quality and inference time on a custom dataset.",
     "Сравнил диффузионные модели, GAN и подходы на основе LMM для виртуальной примерки. Оценил визуальное качество и время вывода модели на собственном наборе данных.",
@@ -229,6 +229,7 @@
     "3rd Year: Analysis of Geometric Properties of Embeddings",
     "3 курс: анализ геометрических свойств эмбеддингов",
   ),
+  location: [#github-link("haritonn/coursework3")],
   description: tr(
     "Ongoing coursework focused on the analysis of embedding spaces.",
     "Курсовая работа в процессе; тема: анализ пространств эмбеддингов.",
