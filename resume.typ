@@ -143,14 +143,14 @@
 
 #resume-item[#tr(
   [
-    - Built a local RAG system with a switchable LLM backend;
-    - Implemented hybrid retrieval, document chunking, and automated relevance evaluation;
-    - Integrated the Qdrant vector database and built a Streamlit interface.
+    - Built a fully local RAG assistant that answers questions over uploaded PDF documents;
+    - Made retrieval configurable from the UI: switchable LLM, embedding model, vector database, and Top-K sources;
+    - Made answers auditable by exposing the source documents and retrieved contexts in a Streamlit interface; designed the system around scalable abstractions and Qdrant.
   ],
   [
-    - Разработал локальную RAG-систему со сменяемым LLM-бэкендом;
-    - Реализовал гибридный поиск, разбиение документов на фрагменты и оценку релевантности;
-    - Интегрировал векторную базу данных Qdrant и интерфейс на Streamlit.
+    - Разработал полностью локального RAG-ассистента для ответов на вопросы по загруженным PDF-документам;
+    - Сделал поиск настраиваемым из интерфейса: смена LLM, embedding-модели, векторной БД и числа Top-K источников;
+    - Обеспечил проверяемость ответов: вывел документы-источники и извлечённый контекст в Streamlit-интерфейс; построил масштабируемую архитектуру с Qdrant.
   ],
 )]
 
@@ -181,16 +181,37 @@
 
 #resume-item[#tr(
   [
-    - Built an image captioning train pipeline with a ResNet backbone and an attention-based LSTM;
-    - Implemented the project entirely in PyTorch without pre-built components;
-    - Implemented beam search and greedy decoding;
-    - Built an end-to-end training workflow.
+    - Engineered an end-to-end image-captioning pipeline on Flickr8k: ResNet-50 encoder + soft-attention LSTM decoder in PyTorch;
+    - Improved training stability with scheduled sampling, label smoothing, attention regularization, gradient clipping, and early stopping;
+    - Built a reproducible experiment workflow with deterministic train/validation/test splits, checkpointing, and optional ClearML tracking;
+    - Evaluated caption quality with BLEU and METEOR; reached 0.1655 BLEU and 0.3774 METEOR on the validation split (~37m. weights).
   ],
   [
-    - Разработал пайплайн обучения на задачу генерации описаний изображений на основе ResNet и LSTM с механизмом внимания;
-    - Реализовал проект полностью на PyTorch, без готовых компонентов;
-    - Реализовал лучевой поиск и жадное декодирование;
-    - Настроил полный цикл обучения.
+    - Спроектировал end-to-end пайплайн генерации англоязычных описаний изображений на Flickr8k: ResNet-50 encoder + LSTM-декодер с soft-attention на PyTorch;
+    - Повысил стабильность обучения через scheduled sampling, label smoothing, регуляризацию внимания, gradient clipping и early stopping;
+    - Обеспечил воспроизводимость экспериментов: детерминированные train/validation/test-разбиения, чекпоинты и опциональный трекинг в ClearML;
+    - Оценил качество генерации по BLEU и METEOR: 0,1655 BLEU и 0,3774 METEOR на validation-выборке (~37млн. весов).
+  ],
+)]
+
+#resume-entry(
+  title: tr("cargo-smi — NVIDIA GPU Monitor", "cargo-smi — мониторинг NVIDIA GPU"),
+  location: [#github-link("haritonn/cargo-smi")],
+  description: "",
+)
+
+#resume-item[#tr(
+  [
+    - Developed a responsive terminal dashboard in Rust for unified monitoring of NVIDIA GPUs and host-system resources;
+    - Integrated NVML to display per-GPU temperature, utilization, VRAM, CUDA/driver versions, and GPU-consuming processes;
+    - Added multi-GPU navigation, configurable auto-refresh, manual refresh, and a 120-sample utilization history chart;
+    - Surfaced CPU, RAM, swap, and the 20 most CPU-intensive processes in the same TUI using Ratatui, Crossterm, and Sysinfo.
+  ],
+  [
+    - Разработал производительный терминальный дашборд на Rust для единого мониторинга NVIDIA GPU и системных ресурсов;
+    - Интегрировал NVML: температура, загрузка, VRAM, версии CUDA/драйвера и процессы, использующие GPU -- по каждой видеокарте;
+    - Реализовал переключение между несколькими GPU, настраиваемое автообновление, ручное обновление и график загрузки за 120 измерений;
+    - Вывел в единый TUI показатели CPU, RAM, swap и топ-20 процессов по загрузке CPU с Ratatui, Crossterm и Sysinfo.
   ],
 )]
 
@@ -202,14 +223,14 @@
 
 #resume-item[#tr(
   [
-    - Implemented baseline ResNet and attention-augmented variant in PyTorch;
-    - Compared convergence speed and classification accuracy;
-    - Tracked experiments with ClearML.
+    - Implemented baseline ResNet-50 and a channel-attention variant from scratch in PyTorch;
+    - Improved classification quality over the baseline by adding channel attention; compared convergence, accuracy, and F1 score;
+    - Built a reproducible training and inference workflow with early stopping, attention visualizations, and ClearML experiment tracking.
   ],
   [
-    - Реализовал базовую ResNet и вариант с механизмом внимания на PyTorch;
-    - Сравнил скорость сходимости и точность классификации;
-    - Отслеживал эксперименты в ClearML.
+    - Реализовал с нуля базовую ResNet-50 и вариант с канальным механизмом внимания на PyTorch;
+    - Повысил качество классификации относительно baseline за счёт канального внимания; сравнил сходимость, accuracy и F1-score;
+    - Построил воспроизводимый пайплайн обучения и инференса с early stopping, визуализацией attention и трекингом экспериментов в ClearML.
   ],
 )]
 
@@ -226,12 +247,12 @@
 
 #resume-entry(
   title: tr(
-    "3rd Year: Analysis of Geometric Properties of Embeddings",
-    "3 курс: анализ геометрических свойств эмбеддингов",
+    "3rd Year: Text-Embedding Geometry & HDBSCAN Clustering",
+    "3 курс: геометрия текстовых эмбеддингов и кластеризация HDBSCAN",
   ),
   location: [#github-link("haritonn/coursework3")],
   description: tr(
-    "Ongoing coursework focused on the analysis of embedding spaces.",
-    "Курсовая работа в процессе; тема: анализ пространств эмбеддингов.",
+    "Investigated how embedding geometry affects news-event clustering: ran 2,604 HDBSCAN experiments across 3 embedding families, 93 feature spaces, and 28 parameter values. Showed that UMAP improved the best F1 for every embedding family; achieved F1 = 0.837 with Jina Embeddings v5 + UMAP(10).",
+    "Исследовал влияние геометрии эмбеддингов на кластеризацию новостных событий: провёл 2 604 эксперимента HDBSCAN для 3 семейств эмбеддингов, 93 пространств признаков и 28 значений параметра. Показал, что UMAP повышает лучший F1 для каждого семейства; достиг F1 = 0,837 с Jina Embeddings v5 + UMAP(10).",
   ),
 )
