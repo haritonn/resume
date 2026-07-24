@@ -19,7 +19,7 @@
     // linkedin: "Example",
     birth: "25.04.2005",
     address: tr("Saratov, Russia", "Саратов, Россия"),
-    positions: ("ML Engineer", "AI Researcher", "Data Scientist"),
+    positions: ("Junior ML Engineer", "ML Intern"),
   ),
 
   profile-picture: image("photka.jpg", width: 4cm, height: 4cm, fit: "cover"),
@@ -50,7 +50,7 @@
 
 #resume-skill-item(
   tr("Spoken languages", "Языки общения"),
-  tr(("Russian (native)", "English (B1-B2)"), ("Русский (родной)", "английский (B1-B2)")),
+  tr(("Russian (native)", "English (B2)"), ("Русский (родной)", "английский (B2)")),
 )
 
 #resume-skill-item(
@@ -81,24 +81,18 @@
   tr("Concepts", "Концепции"),
   tr(
     (
-      "Linear Algebra",
-      "Mathematical Analysis",
-      "Probability Theory & Statistics",
-      "Computer Science",
-      "Classical ML Algorithms (Supervised & Unsupervised)",
+      "Mathematics & Statistics (Linear Algebra, Calculus, Probability Theory)",
+      "Classical ML (Supervised & Unsupervised Learning)",
       "Deep Learning",
-      "Natural Language Processing (NLP)",
-      "Large Language Models (LLM)",
+      "Natural Language Processing & LLM",
+      "Computer Vision",
     ),
     (
-      "Линейная алгебра",
-      "Математический анализ",
-      "Теория вероятностей и статистика",
-      "Информатика",
-      "Классические алгоритмы машинного обучения (с учителем и без учителя)",
+      "Математика и статистика (линейная алгебра, матанализ, теория вероятностей)",
+      "Классическое ML (обучение с учителем и без учителя)",
       "Глубокое обучение",
-      "Обработка естественного языка (NLP)",
-      "Большие языковые модели (LLM)",
+      "Обработка естественного языка и LLM",
+      "Компьютерное зрение",
     ),
   ),
 )
@@ -109,29 +103,40 @@
 #tr(
   [
     - #link("https://dsc.alivetech.org/")[Participant of Development Students Club (DSC)]
-    - I believe education is important and should be shared. I teach machine learning as part of a DSC community.
+    - Teach machine learning as part of a DSC community.
       - Lecture recordings on NumPy (#link("https://youtu.be/5dgYgDVg4v0?si=kPaaW5UcacEL5GJK")[#youtube-icon #underline[YouTube]]) and Pandas (#link("https://youtu.be/ejz3DEaZGjw?si=OycoAyRRrbHNP0l_")[#youtube-icon #underline[YouTube]]).
       - Machine Learning Club playlist: (#link("https://youtube.com/playlist?list=PLIz9eWHArYfhrL4Viaz2vEthyffHz8ZFM&si=ngvT7XNi4CJeeTyJ")[#youtube-icon #underline[YouTube]])
   ],
   [
     - #link("https://dsc.alivetech.org/")[Участник студенческих клубов разработки]
-    - Считаю, что образование важно и знаниями нужно делиться. Преподаю машинное обучение в рамках студенческих клубов разработки.
+    - Преподаю машинное обучение в рамках студенческих клубов разработки.
       - Записи лекций по NumPy (#link("https://youtu.be/5dgYgDVg4v0?si=kPaaW5UcacEL5GJK")[#youtube-icon #underline[YouTube]]) и Pandas (#link("https://youtu.be/ejz3DEaZGjw?si=OycoAyRRrbHNP0l_")[#youtube-icon #underline[YouTube]]).
       - Плейлист клуба машинного обучения: (#link("https://youtube.com/playlist?list=PLIz9eWHArYfhrL4Viaz2vEthyffHz8ZFM&si=ngvT7XNi4CJeeTyJ")[#youtube-icon #underline[YouTube]])
   ],
 )
 
-== #tr("Competitions", "Соревнования")
-#tr(
-  [
-    - Participant in the HSE & X5 Growth Gradient contest, focused on time series forecasting (#link("https://disk.yandex.ru/i/V5_o5Yfp3gVFLQ")[#underline[Link]]).
-    - Participant in the FSP hackathon as an analyst of existing hashing methods and potential sources of entropy.
-  ],
-  [
-    - Участник конкурса HSE & X5 «Градиент роста», посвящённого прогнозированию временных рядов (#link("https://disk.yandex.ru/i/V5_o5Yfp3gVFLQ")[#underline[ссылка]]).
-    - Участник хакатона ФСП в роли аналитика существующих методов хеширования и потенциальных источников энтропии.
-  ],
+= #tr("Practical Experience", "Практический опыт")
+#resume-entry(
+  title: tr("Speech-to-Text System for Dialogues and Catalog Terms", "ASR-система для диалогов и терминов каталога"),
+  location: [#github-link("haritonn/asr_practice")],
+  description: tr(
+    "Production internship project.",
+    "Проект выполнен в рамках производственной практики.",
+  ),
 )
+
+#resume-item[#tr(
+  [
+    - Developed a speech-to-text system for Russian-language dialogues, combining Faster-Whisper transcription, Silero VAD, and pyannote speaker diarization;
+    - Implemented recognition of domain-specific catalog terms with a NeMo CTC context graph, eliminating the need to fine-tune the ASR model;
+    - Linked transcripts and detected terms to dialogue participants; evaluated solution quality using WER, CER, DER, and terminology F1.
+  ],
+  [
+    - Разработал систему распознавания русскоязычных диалогов, объединив транскрибацию Faster-Whisper, Silero VAD и диаризацию спикеров через pyannote;
+    - Реализовал распознавание предметных терминов каталога на основе NeMo CTC context graph без необходимости дообучения ASR-модели;
+    - Связал транскрипт и найденные термины с участниками диалога; оценил качество решения по WER, CER, DER и F1 распознавания терминов.
+  ],
+)]
 
 = #tr("Projects", "Проекты")
 
@@ -145,12 +150,12 @@
   [
     - Built a fully local RAG assistant that answers questions over uploaded PDF documents;
     - Made retrieval configurable from the UI: switchable LLM, embedding model, vector database, and Top-K sources;
-    - Made answers auditable by exposing the source documents and retrieved contexts in a Streamlit interface; designed the system around scalable abstractions and Qdrant.
+    - Made answers auditable by exposing source documents and retrieved contexts in the Streamlit interface; implemented a modular architecture with Qdrant.
   ],
   [
     - Разработал полностью локального RAG-ассистента для ответов на вопросы по загруженным PDF-документам;
     - Сделал поиск настраиваемым из интерфейса: смена LLM, embedding-модели, векторной БД и числа Top-K источников;
-    - Обеспечил проверяемость ответов: вывел документы-источники и извлечённый контекст в Streamlit-интерфейс; построил масштабируемую архитектуру с Qdrant.
+    - Обеспечил проверяемость ответов: вывел документы-источники и извлечённый контекст в Streamlit-интерфейс; реализовал модульную архитектуру с Qdrant.
   ],
 )]
 
@@ -162,14 +167,14 @@
 
 #resume-item[#tr(
   [
-    - Implemented the full encoder-decoder architecture in PyTorch;
+    - Implemented a Transformer encoder-decoder architecture from scratch in PyTorch;
     - Built a modular training pipeline for seq2seq tasks;
-    - Designed a fully customizable pipeline for experiments.
+    - Added flexible configuration of training and experiments.
   ],
   [
-    - Реализовал полную архитектуру «энкодер-декодер» на PyTorch;
-    - Разработал интерфейс для обучения на seq2seq-задачи;
-    - Сделал полностью настраиваемый процесс для экспериментов.
+    - Реализовал с нуля архитектуру Transformer «энкодер-декодер» на PyTorch;
+    - Разработал модульный пайплайн обучения для seq2seq-задач;
+    - Добавил гибкую настройку обучения и экспериментов.
   ],
 )]
 
@@ -182,13 +187,13 @@
 #resume-item[#tr(
   [
     - Engineered an end-to-end image-captioning pipeline on Flickr8k: ResNet-50 encoder + soft-attention LSTM decoder in PyTorch;
-    - Improved training stability with scheduled sampling, label smoothing, attention regularization, gradient clipping, and early stopping;
+    - Applied scheduled sampling, label smoothing, attention regularization, gradient clipping, and early stopping to improve training stability;
     - Built a reproducible experiment workflow with deterministic train/validation/test splits, checkpointing, and optional ClearML tracking;
     - Evaluated caption quality with BLEU and METEOR; reached 0.1655 BLEU and 0.3774 METEOR on the validation split (~37m. weights).
   ],
   [
     - Спроектировал end-to-end пайплайн генерации англоязычных описаний изображений на Flickr8k: ResNet-50 encoder + LSTM-декодер с soft-attention на PyTorch;
-    - Повысил стабильность обучения через scheduled sampling, label smoothing, регуляризацию внимания, gradient clipping и early stopping;
+    - Для повышения стабильности обучения применил scheduled sampling, label smoothing, регуляризацию внимания, gradient clipping и early stopping;
     - Обеспечил воспроизводимость экспериментов: детерминированные train/validation/test-разбиения, чекпоинты и опциональный трекинг в ClearML;
     - Оценил качество генерации по BLEU и METEOR: 0,1655 BLEU и 0,3774 METEOR на validation-выборке (~37млн. весов).
   ],
