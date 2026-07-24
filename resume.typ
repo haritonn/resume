@@ -102,14 +102,14 @@
 == #tr("Teaching & Social", "Преподавание & Социальное")
 #tr(
   [
-    - #link("https://dsc.alivetech.org/")[Participant of Development Students Club (DSC)]
-    - Teach machine learning as part of a DSC community.
+    - Participant in Development Students Clubs (DSC), a student-led community that improves faculty life (#link("https://dsc.alivetech.org/")[#underline[DSC website]]).
+    - Teach machine learning as part of the DSC community.
       - Lecture recordings on NumPy (#link("https://youtu.be/5dgYgDVg4v0?si=kPaaW5UcacEL5GJK")[#youtube-icon #underline[YouTube]]) and Pandas (#link("https://youtu.be/ejz3DEaZGjw?si=OycoAyRRrbHNP0l_")[#youtube-icon #underline[YouTube]]).
       - Machine Learning Club playlist: (#link("https://youtube.com/playlist?list=PLIz9eWHArYfhrL4Viaz2vEthyffHz8ZFM&si=ngvT7XNi4CJeeTyJ")[#youtube-icon #underline[YouTube]])
   ],
   [
-    - #link("https://dsc.alivetech.org/")[Участник студенческих клубов разработки]
-    - Преподаю машинное обучение в рамках студенческих клубов разработки.
+    - Участник студенческих клубов разработки - студенческого сообщества, которое развивает жизнь факультета (#link("https://dsc.alivetech.org/")[#underline[сайт DSC]]).
+    - Преподаю машинное обучение в рамках сообщества DSC.
       - Записи лекций по NumPy (#link("https://youtu.be/5dgYgDVg4v0?si=kPaaW5UcacEL5GJK")[#youtube-icon #underline[YouTube]]) и Pandas (#link("https://youtu.be/ejz3DEaZGjw?si=OycoAyRRrbHNP0l_")[#youtube-icon #underline[YouTube]]).
       - Плейлист клуба машинного обучения: (#link("https://youtube.com/playlist?list=PLIz9eWHArYfhrL4Viaz2vEthyffHz8ZFM&si=ngvT7XNi4CJeeTyJ")[#youtube-icon #underline[YouTube]])
   ],
