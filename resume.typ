@@ -160,21 +160,21 @@
 )]
 
 #resume-entry(
-  title: tr("Transformers from Scratch", "Transformers from Scratch"),
-  location: [#github-link("haritonn/transformers-scratch")],
+  title: tr("Biomedical Search", "Биомедицинская поисковая система"),
+  location: [#github-link("haritonn/fitness_se")],
   description: "",
 )
 
 #resume-item[#tr(
   [
-    - Implemented a Transformer encoder-decoder architecture from scratch in PyTorch;
-    - Built a modular training pipeline for seq2seq tasks;
-    - Added flexible configuration of training and experiments.
+    - Built a search engine over Europe PMC publications on training, recovery, and health using BM25 and MedCPT dense retrieval;
+    - Implemented hybrid retrieval with Reciprocal Rank Fusion and a CLI benchmark measuring nDCG, MAP, Precision, and Recall on a 150-query fitness IR dataset;
+    - Created a local Qwen3 1.7B LLM-as-a-judge pipeline that pools candidates from BM25, dense, and hybrid retrieval for relevance assessment.
   ],
   [
-    - Реализовал с нуля архитектуру Transformer «энкодер-декодер» на PyTorch;
-    - Разработал модульный пайплайн обучения для seq2seq-задач;
-    - Добавил гибкую настройку обучения и экспериментов.
+    - Разработал поисковую систему по публикациям Europe PMC о тренировках, восстановлении и здоровье на базе BM25 и плотного поиска MedCPT;
+    - Реализовал гибридный поиск через Reciprocal Rank Fusion и CLI-бенчмарк с метриками nDCG, MAP, Precision и Recall на fitness IR-датасете из 150 запросов;
+    - Создал локальный пайплайн LLM-as-a-judge на Qwen3 1.7B, объединяющий кандидатов BM25, dense и hybrid-поиска для оценки релевантности.
   ],
 )]
 
