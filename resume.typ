@@ -27,6 +27,8 @@
   paper-size: "us-letter",
   accent-color: rgb("#65b95f"),
   language: tr("en", "ru"),
+  font: "Source Sans 3",
+  header-font: "Roboto",
 )
 
 = #tr("Education", "Образование")
@@ -167,14 +169,14 @@
 
 #resume-item[#tr(
   [
-    - Built a search engine over Europe PMC publications on training, recovery, and health using BM25 and MedCPT dense retrieval;
-    - Implemented hybrid retrieval with Reciprocal Rank Fusion and a CLI benchmark measuring nDCG, MAP, Precision, and Recall on a 150-query fitness IR dataset;
-    - Created a local Qwen3 1.7B LLM-as-a-judge pipeline that pools candidates from BM25, dense, and hybrid retrieval for relevance assessment.
+    - Built a search engine over 23,283 Europe PMC papers on training, recovery, and sports nutrition using weighted BM25, MedCPT with FAISS, and hybrid retrieval with Reciprocal Rank Fusion;
+    - Implemented offline evaluation on an internal set of 150 queries and 3,000 graded relevance judgments using nDCG, MAP, Precision, Recall, and Judged\@K; BM25 reached test nDCG\@10 of 0.5019;
+    - Built a local Ollama/Qwen3 8B-assisted relevance-labeling pipeline pooling BM25, dense, and hybrid candidates; added a Streamlit interface and GitHub Actions CI.
   ],
   [
-    - Разработал поисковую систему по публикациям Europe PMC о тренировках, восстановлении и здоровье на базе BM25 и плотного поиска MedCPT;
-    - Реализовал гибридный поиск через Reciprocal Rank Fusion и CLI-бенчмарк с метриками nDCG, MAP, Precision и Recall на fitness IR-датасете из 150 запросов;
-    - Создал локальный пайплайн LLM-as-a-judge на Qwen3 1.7B, объединяющий кандидатов BM25, dense и hybrid-поиска для оценки релевантности.
+    - Разработал поисковую систему по 23 283 публикациям Europe PMC о тренировках, восстановлении и спортивном питании: взвешенный BM25, MedCPT с FAISS и гибридный поиск через Reciprocal Rank Fusion;
+    - Реализовал офлайн-оценку на внутреннем наборе из 150 запросов и 3 000 градуированных оценок релевантности с метриками nDCG, MAP, Precision, Recall и Judged\@K; BM25 достиг nDCG\@10 = 0,5019 на тестовой выборке;
+    - Построил локальный пайплайн предварительной разметки релевантности через Ollama и Qwen3 8B с объединением кандидатов лексического, семантического и гибридного поиска; добавил Streamlit-интерфейс и CI через GitHub Actions.
   ],
 )]
 
