@@ -144,20 +144,20 @@
 
 #resume-entry(
   title: tr("Local RAG System", "Локальная RAG-система"),
-  location: [#github-link("haritonn/pdf_rag")],
+  location: [#github-link("haritonn/qasper_rag_system")],
   description: "",
 )
 
 #resume-item[#tr(
   [
-    - Built a fully local RAG assistant that answers questions over uploaded PDF documents;
-    - Made retrieval configurable from the UI: switchable LLM, embedding model, vector database, and Top-K sources;
-    - Made answers auditable by exposing source documents and retrieved contexts in the Streamlit interface; implemented a modular architecture with Qdrant.
+    - Built a QASPER-based RAG pipeline for scientific papers with paragraph-level indexing, hybrid dense and sparse retrieval in Qdrant, Reciprocal Rank Fusion, and cross-encoder reranking;
+    - Connected retrieved evidence to local answer generation with Ollama and added source metadata inspection through the CLI;
+    - Evaluated retrieval on 888 of 1,005 validation questions: reranking achieved MRR\@10 0.5221, NDCG\@10 0.5351, and Recall\@10 0.7493.
   ],
   [
-    - Разработал полностью локального RAG-ассистента для ответов на вопросы по загруженным PDF-документам;
-    - Сделал поиск настраиваемым из интерфейса: смена LLM, embedding-модели, векторной БД и числа Top-K источников;
-    - Обеспечил проверяемость ответов: вывел документы-источники и извлечённый контекст в Streamlit-интерфейс; реализовал модульную архитектуру с Qdrant.
+    - Разработал RAG-пайплайн по научным статьям QASPER: индексация на уровне абзацев, гибридный плотный и разреженный поиск в Qdrant, объединение результатов через Reciprocal Rank Fusion и повторное ранжирование cross-encoder-моделью;
+    - Подключил генерацию ответов по найденным свидетельствам через локальную Ollama и вывод метаданных источников в CLI;
+    - Оценил поиск на 888 из 1 005 вопросов validation-выборки: после reranking MRR\@10 = 0,5221, NDCG\@10 = 0,5351, Recall\@10 = 0,7493.
   ],
 )]
 
