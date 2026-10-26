@@ -36,12 +36,13 @@
 
 #resume-skill-item(tr("Programming languages", "Языки программирования"), ("Python", "SQL", "Rust", "Go"))
 #resume-skill-item("ML / DL", ("PyTorch", "Scikit-learn", "XGBoost", "CatBoost", "NumPy", "Pandas", "Polars"))
-#resume-skill-item("NLP / LLM", ("Transformers", "RAG", "Qdrant", "FAISS", "Ollama", "LangChain"))
+#resume-skill-item("NLP / LLM", ("Transformers", "RAG", "Qdrant", "FAISS", "Ollama"))
+#resume-skill-item("Agentic systems", ("LangChain", "LangGraph", "LangSmith", "MCP"))
 #resume-skill-item(tr("Evaluation & experiments", "Оценка и эксперименты"), tr(
-  ("Jupyter notebook", "ranx", "Optuna", "ClearML", "MLFlow", "LangSmith"),
-  ("Jupyter notebook", "ranx", "Optuna", "ClearML", "MLFlow", "LangSmith"),
+  ("Jupyter notebook", "ranx", "Optuna", "ClearML", "MLFlow"),
+  ("Jupyter notebook", "ranx", "Optuna", "ClearML", "MLFlow"),
 ))
-#resume-skill-item(tr("Engineering", "Разработка"), ("Git & GitHub", "Docker", "Linux", "FastAPI", "PostgreSQL", "Streamlit"))
+#resume-skill-item(tr("Engineering", "Разработка"), ("Git & GitHub", "Docker", "Linux", "FastAPI", "Pydantic", "PostgreSQL", "Streamlit"))
 #resume-skill-item(tr("Testing & CI", "Тестирование и CI"), tr(
   ("pytest", "Unit/integration testing", "GitHub Actions"),
   ("pytest", "Модульные и интеграционные тесты", "GitHub Actions"),
