@@ -147,24 +147,7 @@
 
 #block(breakable: false, inset: (top: 3pt, bottom: 5pt))[
 #resume-entry(
-  title: tr("ResNet with Channel Attention", "ResNet с канальным механизмом внимания"),
-  location: [#github-link("haritonn/resnet_attention")],
-)
-#resume-item[#tr(
-  [
-    - Implemented ResNet-50 and a channel-attention variant from scratch in PyTorch; compared convergence, accuracy, and F1.
-    - Added training/inference pipelines, early stopping, attention visualizations, and ClearML experiment tracking.
-  ],
-  [
-    - Реализовал с нуля ResNet-50 и вариант с канальным attention на PyTorch; сравнил сходимость, accuracy и F1.
-    - Добавил пайплайны обучения и инференса, early stopping, визуализацию внимания и трекинг экспериментов в ClearML.
-  ],
-)]
-]
-
-#block(breakable: false, inset: (top: 3pt, bottom: 5pt))[
-#resume-entry(
-  title: tr("cargo-smi — NVIDIA GPU Monitor", "cargo-smi — мониторинг NVIDIA GPU"),
+  title: tr("cargo-smi - NVIDIA GPU Monitor", "cargo-smi - мониторинг NVIDIA GPU"),
   location: [#github-link("haritonn/cargo-smi")],
 )
 #resume-item[#tr(
