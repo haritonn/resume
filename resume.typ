@@ -113,6 +113,23 @@
 
 #block(breakable: false, inset: (top: 3pt, bottom: 5pt))[
 #resume-entry(
+  title: "MAS Crawler (WIP)",
+  location: [#github-link("haritonn/mas_crawler")],
+)
+#resume-item[#tr(
+  [
+    - Built an MVP for site-specific search: an LLM agent prepares a crawl plan from a URL and a user-defined goal; a Rust engine collects documents and builds a Tantivy/BM25 index. Integrated Python and Rust through PyO3 and orchestrated the pipeline with LangGraph.
+    - Implemented search-configuration comparison using nDCG, Precision, and Recall; the next stage is an agent that runs experiments and selects settings based on relevance judgments.
+  ],
+  [
+    - Разработал MVP поиска по сайту: LLM-агент формирует план обхода по URL и цели пользователя, Rust-движок собирает документы и строит индекс Tantivy/BM25. Связал Python и Rust через PyO3, организовал пайплайн в LangGraph.
+    - Реализовал сравнение поисковых конфигураций по nDCG, Precision и Recall; следующий этап --- агент для проведения экспериментов и выбора настроек по оценкам релевантности.
+  ],
+)]
+]
+
+#block(breakable: false, inset: (top: 3pt, bottom: 5pt))[
+#resume-entry(
   title: tr("Image Captioning", "Генерация описаний изображений"),
   location: [#github-link("haritonn/caption_gen")],
 )
